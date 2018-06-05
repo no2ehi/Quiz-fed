@@ -15,6 +15,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { IndexComponent } from './index/index.component';
 
 import { ApiService } from './api.service';
+import { QuizComponent } from './quiz/quiz.component';
+import { QuizzesComponent } from './quizzes/quizzes.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { ApiService } from './api.service';
     QuestionComponent,
     QuestionsComponent,
     NavbarComponent,
-    IndexComponent
+    IndexComponent,
+    QuizComponent,
+    QuizzesComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,19 @@
+<mat-card>
+  <mat-card-title>
+    <span *ngIf="!quiz.id">امتحان جدید</span>
+    <span *ngIf="quiz.id">ویرایش امتحان</span>
+  </mat-card-title>
+  <mat-card-content>
+    <form>
+      <mat-form-field class="fullwidth">
+        <input matInput [(ngModel)]="quiz.title" name="title" placeholder="امتحان">
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <button *ngIf="!quiz.id" mat-button (click)="post(quiz)">افزودن</button>
+    <button *ngIf="quiz.id" mat-button (click)="api.editQuiz(quiz)">ویرایش</button>
+    <button *ngIf="quiz.id" mat-button (click)="quiz = {}">افزودن </button>
+  </mat-card-actions>
+</mat-card>
+<app-quizzes></app-quizzes>
