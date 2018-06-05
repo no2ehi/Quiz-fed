@@ -16,8 +16,8 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
 
-  getQeustions() {
-    return this.http.get('https://localhost:44340/api/questions');
+  getQeustions(quizId) {
+    return this.http.get(`https://localhost:44340/api/questions/${quizId}`);
   }
 
   postQuestion(question) {
