@@ -1,4 +1,8 @@
 <mat-card>
+    <mat-card-title>
+        <span *ngIf="!question.id">سوال جدید</span>
+        <span *ngIf="question.id">ویرایش سوال</span>
+    </mat-card-title>
     <mat-card-content>
         <form>
             <mat-form-field class="fullwidth">
@@ -19,6 +23,8 @@
         </form>
     </mat-card-content>
     <mat-card-actions>
-        <button mat-button (click)="post(question)">افزودن</button>
+        <button *ngIf="!question.id" mat-button (click)="post(question)">افزودن</button>
+        <button *ngIf="question.id" mat-button (click)="api.editQuestion(question)">ویرایش</button>
+        <button *ngIf="question.id" mat-button (click)="question = {}">افزودن </button>
     </mat-card-actions>
 </mat-card>

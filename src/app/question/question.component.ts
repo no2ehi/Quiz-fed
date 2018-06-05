@@ -12,6 +12,7 @@ export class QuestionComponent implements OnInit {
   constructor(private api: ApiService) { }
 
   ngOnInit() {
+    this.api.questionSelected.subscribe(q => this.question = q);
   }
 
   post(question) {
