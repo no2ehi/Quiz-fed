@@ -1,6 +1,7 @@
 <mat-toolbar color="primary">
   <button mat-button routerLink="">امتحان</button>
   <span fxFlex="1 1 auto"></span>
-  <button mat-button routerLink="/register">ثبت نام</button>
-  <button mat-button routerLink="/login">ورود</button>
+  <button *ngIf="!auth.isAuthenticated" mat-button routerLink="/register">ثبت نام</button>
+  <button *ngIf="!auth.isAuthenticated" mat-button routerLink="/login">ورود</button>
+  <button *ngIf="auth.isAuthenticated" mat-button (click)="auth.logout()">بیرون رفتن</button>
 </mat-toolbar>
