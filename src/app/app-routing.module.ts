@@ -6,12 +6,14 @@ import { QuestionsComponent } from './questions/questions.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { QuizzesComponent } from './quizzes/quizzes.component';
 import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   { path: '', component: IndexComponent },
   { path: 'question', component: QuestionComponent },
   { path: 'question/:quizId', component: QuestionComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'quiz', component: QuizComponent },
 ];
 

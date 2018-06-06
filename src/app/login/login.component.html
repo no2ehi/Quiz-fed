@@ -1,0 +1,11 @@
+<mat-card>
+  <form [formGroup]="form" (ngSubmit)="auth.login(form.value)">
+    <mat-form-field>
+      <input matInput type="email" placeholder="ایمیل" formControlName="email">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="password" placeholder="گذرواژه" formControlName="password">
+    </mat-form-field>
+    <button mat-raised-button color="primary" [disabled]="!form.valid">ورود</button>
+  </form>
+</mat-card>

@@ -20,6 +20,7 @@ import { RegisterComponent } from './register/register.component';
 import { ApiService } from './api.service';
 import { AuthService } from './auth.service';
 import { AuthInterceptor } from './auth.interceptor';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { AuthInterceptor } from './auth.interceptor';
     IndexComponent,
     QuizComponent,
     QuizzesComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
