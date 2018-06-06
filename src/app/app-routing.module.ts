@@ -11,9 +11,8 @@ const routes: Routes = [
   { path: '', component: IndexComponent },
   { path: 'question', component: QuestionComponent },
   { path: 'question/:quizId', component: QuestionComponent },
-  { path: 'questions', component: QuestionsComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'quizzes', component: QuizzesComponent },
+  { path: 'quiz', component: QuizComponent },
 ];
 
 @NgModule({

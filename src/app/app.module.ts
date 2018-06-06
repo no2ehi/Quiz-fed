@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 // Added Module
@@ -13,11 +13,13 @@ import { QuestionComponent } from './question/question.component';
 import { QuestionsComponent } from './questions/questions.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { IndexComponent } from './index/index.component';
-
-import { ApiService } from './api.service';
 import { QuizComponent } from './quiz/quiz.component';
 import { QuizzesComponent } from './quizzes/quizzes.component';
 import { RegisterComponent } from './register/register.component';
+
+import { ApiService } from './api.service';
+import { AuthService } from './auth.service';
+import { AuthInterceptor } from './auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,11 @@ import { RegisterComponent } from './register/register.component';
     FlexLayoutModule
 
   ],
-  providers: [ApiService],
+  providers: [ApiService, AuthService, {
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

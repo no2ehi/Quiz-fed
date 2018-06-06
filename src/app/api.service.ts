@@ -17,11 +17,11 @@ export class ApiService {
 
 
   getQeustions(quizId) {
-    return this.http.get(`https://localhost:44340/api/questions/${quizId}`);
+    return this.http.get(`http://localhost:63100/api/questions/${quizId}`);
   }
 
   postQuestion(question) {
-    this.http.post('https://localhost:44340/api/questions', question).subscribe(res => {
+    this.http.post('http://localhost:63100/api/questions', question).subscribe(res => {
       console.log(res);
     });
   }
@@ -31,7 +31,7 @@ export class ApiService {
   }
 
   editQuestion(question) {
-    this.http.put(`https://localhost:44340/api/questions/${question.id}`, question).subscribe(res => {
+    this.http.put(`http://localhost:63100/api/questions/${question.id}`, question).subscribe(res => {
       console.log(res);
     })
   }
@@ -39,11 +39,11 @@ export class ApiService {
 
 
   getQuizzes() {
-    return this.http.get('https://localhost:44340/api/quizzes');
+    return this.http.get('http://localhost:63100/api/quizzes');
   }
 
   postQuiz(quiz) {
-    this.http.post('https://localhost:44340/api/quizzes', quiz).subscribe(res => {
+    this.http.post('http://localhost:63100/api/quizzes', quiz).subscribe(res => {
       console.log(res);
     });
   }
@@ -53,7 +53,7 @@ export class ApiService {
   }
 
   editQuiz(quiz) {
-    this.http.put(`https://localhost:44340/api/quizzes/${quiz.id}`, quiz).subscribe(res => {
+    this.http.put(`http://localhost:63100/api/quizzes/${quiz.id}`, quiz).subscribe(res => {
       console.log(res);
     });
   }
