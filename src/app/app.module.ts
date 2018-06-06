@@ -22,6 +22,7 @@ import { AuthService } from './auth.service';
 import { AuthInterceptor } from './auth.interceptor';
 import { LoginComponent } from './login/login.component';
 import { PlayComponent } from './play/play.component';
+import { PlayquizComponent } from './playquiz/playquiz.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { PlayComponent } from './play/play.component';
     QuizzesComponent,
     RegisterComponent,
     LoginComponent,
-    PlayComponent
+    PlayComponent,
+    PlayquizComponent
   ],
   imports: [
     BrowserModule,

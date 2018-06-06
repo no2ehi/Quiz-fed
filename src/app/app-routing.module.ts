@@ -8,6 +8,7 @@ import { QuizzesComponent } from './quizzes/quizzes.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { PlayComponent } from './play/play.component';
+import { PlayquizComponent } from './playquiz/playquiz.component';
 
 const routes: Routes = [
   { path: '', component: IndexComponent },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'quiz', component: QuizComponent },
   { path: 'play', component: PlayComponent },
+  { path: 'playQuiz/:quizId', component: PlayquizComponent },
 ];
 
 @NgModule({
