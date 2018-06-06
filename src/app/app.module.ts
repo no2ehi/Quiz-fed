@@ -21,6 +21,7 @@ import { ApiService } from './api.service';
 import { AuthService } from './auth.service';
 import { AuthInterceptor } from './auth.interceptor';
 import { LoginComponent } from './login/login.component';
+import { PlayComponent } from './play/play.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { LoginComponent } from './login/login.component';
     QuizComponent,
     QuizzesComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    PlayComponent
   ],
   imports: [
     BrowserModule,
