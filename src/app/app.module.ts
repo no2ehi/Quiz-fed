@@ -23,6 +23,7 @@ import { AuthInterceptor } from './auth.interceptor';
 import { LoginComponent } from './login/login.component';
 import { PlayComponent } from './play/play.component';
 import { PlayquizComponent } from './playquiz/playquiz.component';
+import { FinishedComponent } from './finished/finished.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { PlayquizComponent } from './playquiz/playquiz.component';
     RegisterComponent,
     LoginComponent,
     PlayComponent,
-    PlayquizComponent
+    PlayquizComponent,
+    FinishedComponent
   ],
   imports: [
     BrowserModule,
@@ -54,6 +56,7 @@ import { PlayquizComponent } from './playquiz/playquiz.component';
     useClass: AuthInterceptor,
     multi: true
   }],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [FinishedComponent]
 })
 export class AppModule { }
